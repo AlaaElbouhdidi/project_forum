@@ -9,5 +9,5 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 - Die Posts können auch bewertet werden.
 
-- Authentifizierung und Regestrierung sind auch unterstüzt.
+- Authentifizierung und Registrierung sind auch unterstüzt.
 
