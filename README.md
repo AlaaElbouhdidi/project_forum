@@ -21,7 +21,7 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
     - Erstelldatum
     - Anzahl der Kommentare
 
-- Threads/Kategorien implementieren
+- Threads implementieren
 
 - Kommentare:
     - Kommentarautor und Erstelldatum
