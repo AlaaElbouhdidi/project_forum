@@ -14,7 +14,7 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 # Must have:
 
-- registrieren 
+- Registrieren 
 
 - Userverwaltung: Namen ändern, etc.
 
