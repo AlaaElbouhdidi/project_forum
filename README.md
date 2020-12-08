@@ -18,7 +18,11 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 - Userverwaltung: Namen ändern, etc.
 
-- Posts anlegen: Titel, Text und Tags einfügen.
+- Posts anlegen: 
+    - Titel und Text.
+    - Tags oder Kategorie
+    - Erstelldatum
+    - Anzahl der Comments
 
 - Posts bearbeiten: durch den Autor oder Admin ändern/löschen
 
@@ -29,6 +33,7 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 - Rechteverwaltung: User vs Admin (Gäste können nur lesen)
 
 # Optional:
+
 - Tags
 
 - Up/Down Voting
