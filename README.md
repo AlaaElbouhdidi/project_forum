@@ -14,9 +14,6 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 # Must have:
 
-- Registrieren 
-
-- Userverwaltung: Namen ändern, etc.
 
 - Posts anlegen: 
     - Titel und Text.
@@ -24,12 +21,14 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
     - Erstelldatum
     - Anzahl der Kommentare
 
+
 - Threads/Kategorien implementieren
 
 - Kommentare:
     - Kommentarautor und Erstelldatum
     - Komentare beantworten
     - Kommentar voten (Nice to have)
+
 
 - Rechteverwaltung: 
     - Admin:
