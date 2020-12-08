@@ -13,11 +13,14 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 
 # Must have:
+
 - registrieren 
 
-- Userverwaltung
+- Userverwaltung: Namen ändern, etc.
 
-- Posts anlegen / bearbeiten
+- Posts anlegen: Titel, Text und Tags einfügen.
+
+- Posts bearbeiten: durch den Autor oder Admin ändern/löschen
 
 - Threads/Kategorien implementieren
 
