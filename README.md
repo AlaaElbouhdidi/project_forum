@@ -13,11 +13,13 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 
 Must have:
-- Threads/Kategorien
+- registrieren 
 
-- Posts
+- Userverwaltung
 
-- User
+- Posts anlegen / bearbeiten
+
+- Threads/Kategorien implementieren
 
 - Kommentare (und Kommentarketten)
 
@@ -26,6 +28,6 @@ Must have:
 Optional:
 - Tags
 
-- Voting
+- Up/Down Voting
 
 - Suche
