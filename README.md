@@ -1,4 +1,4 @@
-# Forum
+# inForumMe
 
 
 In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben, Posts bzw. Fragen zu stellen und Kommentare abzugeben. 
