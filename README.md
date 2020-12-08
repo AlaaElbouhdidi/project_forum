@@ -11,3 +11,21 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 - Authentifizierung und Registrierung sind auch unterstüzt.
 
+
+Must have:
+- Threads/Kategorien
+
+- Posts
+
+- User
+
+- Kommentare (und Kommentarketten)
+
+- Rechteverwaltung: User vs Admin (Gäste können nur lesen)
+
+Optional:
+- Tags
+
+- Voting
+
+- Suche
