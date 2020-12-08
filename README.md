@@ -12,7 +12,7 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 - Authentifizierung und Registrierung sind auch unterstüzt.
 
 
-Must have:
+# Must have:
 - registrieren 
 
 - Userverwaltung
@@ -25,7 +25,7 @@ Must have:
 
 - Rechteverwaltung: User vs Admin (Gäste können nur lesen)
 
-Optional:
+# Optional:
 - Tags
 
 - Up/Down Voting
