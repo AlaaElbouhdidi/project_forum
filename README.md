@@ -47,7 +47,7 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 - Tags bei Posts
 
-- Up/Down Voting zu jeden Post oder Komentar
+- Up/Down Voting zu jedem Post oder Komentar
 
 - Suche nach Titel
 
