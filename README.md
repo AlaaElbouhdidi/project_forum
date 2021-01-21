@@ -14,23 +14,41 @@ In einem Forum können die Besucher auf der Internetseite die Möglichkeit haben
 
 # Must have:
 
-- Registrieren 
 
-- Userverwaltung: Namen ändern, etc.
+- Posts anlegen: 
+    - Titel und Text.
+    - Kategorie
+    - Erstelldatum
+    - Anzahl der Kommentare
 
-- Posts anlegen: Titel, Text und Tags einfügen.
+- Threads implementieren
 
-- Posts bearbeiten: durch den Autor oder Admin ändern/löschen
+- Kommentare:
+    - Kommentarautor und Erstelldatum
+    - Komentare beantworten
+    - Kommentar voten (Nice to have)
 
-- Threads/Kategorien implementieren
 
-- Kommentare (und Kommentarketten)
-
-- Rechteverwaltung: User vs Admin (Gäste können nur lesen)
+- Rechteverwaltung: 
+    - Admin:
+        - alle Posts bearbeiten oder löschen
+        - Kategorien erstellen
+        - Users verwalten
+    - Users:
+        - einloggen
+        - sein Profil verwalten
+        - Posts erstellen
+        - kommentieren
+    - Guest
+        - Posts lesen
+        - registrieren
 
 # Optional:
-- Tags
 
-- Up/Down Voting
+- Tags bei Posts
 
-- Suche
+- Up/Down Voting zu jedem Post oder Komentar
+
+- Suche nach Titel
+
+- filtern und sortieren
