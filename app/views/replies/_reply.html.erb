@@ -1,0 +1,49 @@
+<% unless reply.parent_id %>
+  <div class="box">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <%= gravatar_image_tag(reply.user.email, class: 'border-radius-50', size: 48, alt: reply.user.username) %>
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong><%= reply.user.username %></strong> <small><%= time_ago_in_words(reply.created_at) %></small>
+            <br/>
+            <%= markdown(reply.reply) %>
+          </p>
+
+        </div>
+        <% if reply_author(reply) || has_role?(:admin) %>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item">
+                <%= link_to edit_post_reply_path(reply.post, reply) do %>
+                  <span class="icon is-small"><i class="fa fa-pencil"></i></span>
+                <% end %>
+              </a>
+              <a class="level-item">
+                <%= link_to [reply.post, reply],
+                            method: :delete, data: { confirm: "Are you sure ?" } do %>
+                  <span class="icon is-small"><i class="fa fa-trash-o"></i></span>
+                <% end %>
+              </a>
+            </div>
+          </nav>
+        <% end %>
+        <a class="level-item">
+          <%= link_to 'reply', new_post_reply_path(@post, parent_id: reply.id), remote: true%>
+        </a>
+        <div id="subreply-form-<%= reply.id %>"></div>
+      </div>
+    </article>
+  </div>
+
+
+  <% if reply.subreplies.any? %>
+    <% reply.subreplies.each do |subreply| %>
+      <%= render partial: 'replies/subreply', locals: { subreply: subreply } %>
+    <% end %>
+  <% end %>
+<% end %>

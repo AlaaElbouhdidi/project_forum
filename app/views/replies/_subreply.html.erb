@@ -1,0 +1,36 @@
+
+<div class="box subreply">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-48x48">
+        <%= gravatar_image_tag(subreply.user.email, class: 'border-radius-50', size: 48, alt: subreply.user.username) %>
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%= subreply.user.username %></strong> <small><%= time_ago_in_words(subreply.created_at) %></small>
+          <br/>
+          <%= markdown(subreply.reply) %>
+        </p>
+      </div>
+      <% if reply_author(subreply) || has_role?(:admin)%>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            <a class="level-item">
+              <%= link_to edit_post_reply_path(subreply.post, subreply) do %>
+                <span class="icon is-small"><i class="fa fa-pencil"></i></span>
+              <% end %>
+            </a>
+            <a class="level-item">
+              <%= link_to [subreply.post, subreply],
+                          method: :delete, data: {confirm: "Are you sure ?" } do %>
+                <span class="icon is-small"><i class="fa fa-trash-o"></i></span>
+              <% end %>
+            </a>
+          </div>
+        </nav>
+      <% end %>
+    </div>
+  </article>
+</div>

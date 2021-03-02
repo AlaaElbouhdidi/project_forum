@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InForuMe</title>
+  <%= csrf_meta_tags %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag  'application', 'data-turbolinks-track': 'reload' %>
+
+</head>
+
+<body>
+<% if flash[:notice] %>
+  <div class="notification is-success global-notification">
+    <p class="notice"><%= notice %></p>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="notification is-danger global-notification">
+    <p class="alert"><%= alert %></p>
+  </div>
+<% end %>
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to root_path, class:"navbar-item" do %>
+      <h1 class="title is-5">InForuME</h1>
+    <% end  %>
+    <div class="navbar-burger burger" data-target="navbar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbar" class="navbar-menu">
+    <div class="navbar-end">
+      <% if user_signed_in? %>
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <%= link_to 'New Post', new_post_path, class:"button is-info" %>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
+          <div class="navbar-dropdown is-right">
+            <%= link_to current_user.username, edit_user_registration_path, class:"navbar-item" %>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+          </div>
+        </div>
+      <% else %>
+        <div class="navbar-item">
+          <div class="field is-grouped">
+
+            <p class="control">
+              <%= link_to 'New Post', new_post_path, class:"button is-info" %>
+            </p>
+
+            <p class="control">
+              <%= link_to "Sign In", new_user_session_path, class: "button is-light"%>
+            </p>
+
+            <p class="control">
+              <%= link_to "Sign up", new_user_registration_path, class: "button is-light" %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</nav>
+<section class="hero is-homepage is-low">
+  <div class="hero-body is-patterned">
+    <div class="container">
+      <h1 class="title is-2 has-text-centered">InForuMe</h1>
+      <h2 class="subtitle has-text-centered">
+        Where all Infos are yours
+      </h2>
+      <div class="tinytext" style="font-size: 8px; text-align-last: end">For Ads, contact us</div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <%= yield %>
+  </div>
+</section>
+<footer class="footer" style="margin-top: 200px;">
+  <div class="container">
+    <div class="columns is-desktop text-small">
+      <div class="column">
+        <p class="footer-title">About</p>
+        <p>
+          InForuMe is not like any other forum. It provides you to get the most hot topics online and you can give feedbacks about them. We are a small team of 1 person and try to make this website goes viral. If you agree too go support us on Paypal or patreon we'd be very thankfull.
+        </p>
+      </div>
+      <div class="column">
+        <div class="columns">
+          <div class="column">
+            <p class="footer-title">Sitemap</p>
+            <ul>
+              <li><a href="/posts">Posts</a></li>
+              <li><a href="/">Channels</a></li>
+              <li><a href="/">About Us</a></li>
+              <li><a href="/">Contact</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <p class="footer-title">Contacts</p>
+            <ul>
+              <li><a rel="nofollow" href="https://twitter.com/">Twitter</a></li>
+              <li><a href="/site/email">Email</a></li>
+              <li><a rel="nofollow" href="#">Feedback</a></li>
+              <li><a href="#">Support us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom text-small columns">
+      <div class="column">
+        <span class="footer-title">InForuMe</span>
+        |
+        <a href="/site/privacy">Privacy Policy</a>
+        |
+        <a href="/site/terms">Terms</a>
+        |
+        <span class="footer-title">CC BY-SA 4.0</span>
+      </div>
+      <div class="column is-narrow">
+        <span class="footer-title">All rights are reserved.</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+
+</html>

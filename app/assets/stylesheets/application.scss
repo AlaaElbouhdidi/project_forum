@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bulma";
+@import "functions";
+
+.image {
+  border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.textarea {
+  height: 350px;
+  font-family: BlinkMacSystemFont, Monaco, san-serif;
+  border-radius: 20px;
+  font-size: .9rem;
+  padding: 1rem;
+}
+
+.post-title {
+  margin-bottom: 0;
+}
+.column-title{
+  color: #666666 ;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.125;
+}
+
+.subreply {
+  margin-left: 10%;
+}
+
+.label{
+  color: #2E2F30 !important;
+  text-align: start !important;
+}
+.navbar{
+  margin-bottom: 0;
+}
+.hero.is-homepage {
+  background: linear-gradient(135deg,#6d96c1,#b5c9df) ;
+}
+
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body {
+  background-color: #f6f9fc ;
+}
+.postbox {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 20px;
+}
+.boxed{
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 1rem;
+  margin-top: 10px;
+}
+
+.box{
+  border-radius: 33px !important;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: .75rem;
+}
+.column.is-narrow{
+  float: right !important;
+  width: unset !important;
+}
+.subtitle-replies{
+  font-size: 15px;
+}
+
+.center-text{
+  text-align: center;
+}
+.figure {
+  left: 185px;
+}

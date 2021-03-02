@@ -1,0 +1,41 @@
+<main class="column is-8">
+  <h3 class="column-title is-5 has-text-grey-light">Latest Posts</h3>
+  <div class="posts">
+    <% @posts.each do |post| %>
+      <div class="postbox columns bb-not-last pv10">
+        <div class="column is-1">
+          <%= gravatar_image_tag(post.user.email, class: 'border-radius-50', size: 48, alt: post.user.username) %>
+        </div>
+        <div class="column is-8">
+          <%= link_to post do %>
+            <h3 class="title is-5"><%= post.title %></h3>
+          <% end %>
+          <div class="content">
+            <%= truncate(strip_markdown(post.content), length: 140) %>
+            <p><em><small>Posted <%= time_ago_in_words(post.created_at) %> ago in
+              <% if post.channel %>
+                <%= link_to post.channel.channel, post.channel %>
+              <% end %>
+              by @<%= post.user.username %>
+            </small>
+            </em>
+            </p>
+          </div>
+        </div><div class="column has-text-right">
+        <% if post_author(post) || has_role?(:admin) %>
+
+            <%= link_to 'Edit', edit_post_path(post), class: 'button' %>
+            <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "button is-danger" %>
+            <div class="subtitle-replies is-5 has-text-grey"><%= post.replies.count %> Replies</div>
+
+        <% end %>
+          </div>
+      </div>
+
+    <% end %>
+    <br/>
+    <% if @posts.count == 0 %>
+    <p class="has-text-center">Sorry! There is no post at the moment.</p>
+      <% end %>
+  </div>
+</main>

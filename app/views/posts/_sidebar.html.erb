@@ -1,0 +1,23 @@
+<aside class="column is-narrow sidebar">
+  <h3 class="column-title is-5 has-text-grey-light">Channels &emsp;
+    <% if has_role?(:admin) %><span class="icon cog is-small">
+      <%= link_to channels_path do %>
+        <i class="fa fa-cog"></i>
+      <% end %></span>
+    <% end %>
+  </h3>
+
+  <div class="boxed">
+    <ul class="list">
+      <% @channels.each do |c| %>
+        <li style="padding-left: 5px;"> <%= link_to c.channel, c %></li>
+        &emsp;
+      <% end %>
+    </ul>
+  </div>
+  <br/>
+
+  <% if has_role?(:admin) %>
+    <%= link_to 'New Channel', new_channel_path, class: 'button is-info' %>
+  <% end %>
+</aside>
